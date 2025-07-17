@@ -2,9 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 
-# === Konfigurasi Telegram ===
-BOT_TOKEN = "7893642419:AAGVX9WoWwDedz5vG7qhm-2kqqv_vO4PAK0"
-CHANNEL_ID = "@zvotion"  # atau ID numerik jika channel private
+import os
+
+# === Konfigurasi Telegram dari environment variables ===
+BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
+CHANNEL_ID = os.environ.get("TELEGRAM_CHANNEL_ID")
 
 def send_to_telegram(message):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
