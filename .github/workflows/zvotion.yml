@@ -2,13 +2,11 @@ name: ZVotion Auto Send
 
 on:
   schedule:
-    - cron: '*/1 * * * *'  # setiap 5 menit sekali (UTC)
-  workflow_dispatch:  # bisa juga dijalankan manual lewat GitHub Actions
+    - cron: '*/5 * * * *'  # setiap 5 menit
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -19,8 +17,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: |
-          pip install requests beautifulsoup4
+        run: pip install requests beautifulsoup4
 
-      - name: Run ZVotion Auto Send script
+      - name: Run Python script
         run: python zvotion_auto_send_project.py
