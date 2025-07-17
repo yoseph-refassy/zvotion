@@ -1,8 +1,8 @@
-name: Kirim Renungan ke Telegram
+name: ZVotion Auto Send
 
 on:
   schedule:
-    - cron: '24 9 * * *'  # Jam 05:00 WIB
+    - cron: '39 9 * * *'
   workflow_dispatch:
 
 jobs:
