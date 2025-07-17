@@ -2,7 +2,7 @@ name: ZVotion Auto Send
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # setiap 5 menit
+    - cron: '*/1 * * * *'  # setiap 5 menit
 
 jobs:
   run-script:
