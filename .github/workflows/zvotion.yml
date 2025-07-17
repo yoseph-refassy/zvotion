@@ -2,7 +2,7 @@ name: ZVotion Auto Send
 
 on:
   schedule:
-    - cron: '0 20 * * *'
+    - cron: "25 10 * * *"
   workflow_dispatch:
 
 jobs:
