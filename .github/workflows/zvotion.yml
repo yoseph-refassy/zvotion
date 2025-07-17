@@ -2,7 +2,7 @@ name: Kirim Renungan ke Telegram
 
 on:
   schedule:
-    - cron: '0 5 * * *'  # Jam 05:00 WIB
+    - cron: '12 9 * * *'  # Jam 05:00 WIB
   workflow_dispatch:
 
 jobs:
