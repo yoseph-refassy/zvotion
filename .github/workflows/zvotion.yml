@@ -1,8 +1,6 @@
 name: ZVotion Auto Send
 
-on:
-  schedule:
-    - cron: '*/1 * * * *'  # setiap 5 menit
+  workflow_dispatch:
 
 jobs:
   run-script:
@@ -21,4 +19,3 @@ jobs:
 
       - name: Run Python script
         run: python zvotion_auto_send_project.py
-
